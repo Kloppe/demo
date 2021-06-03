@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.mapper.OperationLogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.demo.dao.entity.OperationLogDO">
+        <result column="id" property="id" />
+        <result column="creator" property="creator" />
+        <result column="modifier" property="modifier" />
+        <result column="is_deleted" property="isDeleted" />
+        <result column="gmt_create" property="gmtCreate" />
+        <result column="gmt_modified" property="gmtModified" />
+        <result column="project_name" property="projectName" />
+        <result column="project_code" property="projectCode" />
+        <result column="req_uri" property="reqUri" />
+        <result column="req_url_id" property="reqUrlId" />
+        <result column="req_url_desc" property="reqUrlDesc" />
+        <result column="req_url_type" property="reqUrlType" />
+        <result column="client_ip" property="clientIp" />
+        <result column="operate_time" property="operateTime" />
+        <result column="req_param" property="reqParam" />
+        <result column="res_data" property="resData" />
+        <result column="mobile" property="mobile" />
+        <result column="device_id" property="deviceId" />
+        <result column="risk_level" property="riskLevel" />
+        <result column="employee_account_name" property="employeeAccountName" />
+        <result column="employee_account" property="employeeAccount" />
+        <result column="trigger_hour" property="triggerHour" />
+        <result column="trigger_date" property="triggerDate" />
+        <result column="request_id" property="requestId" />
+        <result column="from_app_code" property="fromAppCode" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,
+        creator,
+        modifier,
+        is_deleted,
+        gmt_create,
+        gmt_modified,
+        project_name, project_code, req_uri, req_url_id, req_url_desc, req_url_type, client_ip, operate_time, req_param, res_data, mobile, device_id, risk_level, employee_account_name, employee_account, trigger_hour, trigger_date, request_id, from_app_code
+    </sql>
+
+</mapper>
