@@ -22,6 +22,7 @@
 		<module>demo-dao</module>
 		<module>demo-service</module>
 		<module>demo-web</module>
+		<module>zookeeper</module>
 	</modules>
 
 	<properties>
@@ -35,7 +36,6 @@
 		<mybatis-plus-boot-starter.version>3.3.2</mybatis-plus-boot-starter.version>
 		<spring-boot.version>2.2.1</spring-boot.version>
 		<druid-spring-boot-starter.version>1.1.22</druid-spring-boot-starter.version>
-
 	</properties>
 
 	<dependencyManagement>
@@ -62,6 +62,11 @@
 			</dependency>
 			<dependency>
 				<groupId>com.baomidou</groupId>
+				<artifactId>mybatis-plus-boot-starter</artifactId>
+				<version>${mybatis-plus-boot-starter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.baomidou</groupId>
 				<artifactId>mybatis-plus-generator</artifactId>
 				<version>${mybatis-plus-generator.version}</version>
 				<scope>test</scope>
@@ -82,11 +87,6 @@
 				<version>${lombok.version}</version>
 				<optional>true</optional>
 				<scope>provided</scope>
-			</dependency>
-			<dependency>
-				<groupId>com.baomidou</groupId>
-				<artifactId>mybatis-plus-boot-starter</artifactId>
-				<version>${mybatis-plus-boot-starter.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.alibaba</groupId>
